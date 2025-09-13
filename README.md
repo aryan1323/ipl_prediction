@@ -29,8 +29,8 @@ This project combines a <b>FastAPI backend</b> (with an XGBoost model) and a <b>
 ---
 ## 🔗 Live Demo
 
-- 🖥 **Frontend:** [https://your-frontend-url.com](https://your-frontend-url.com)
-- 🔌 **Backend API:** [https://your-backend-url.com/predict](https://your-backend-url.com/predict)
+- 🖥 **Frontend:** [https://ipl-prediction-odgx.vercel.app/](https://ipl-prediction-odgx.vercel.app/)
+- 🔌 **Backend API:** [https://backend-ipl-5.onrender.com](https://backend-ipl-5.onrender.com)
 ---
 ## 🛠️ Setup \& Run
 
@@ -60,9 +60,7 @@ npm start
 
 
 In development, point frontend Axios calls to:
-
-
-http://localhost:8000/predict
+https://backend-ipl-5.onrender.com
 
 
 
