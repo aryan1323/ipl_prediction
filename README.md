@@ -1,54 +1,94 @@
-IPL Match Winner Predictor
-Predict the outcome of IPL matches with AI! This project consists of a FastAPI backend powered by an XGBoost model and a React frontend for interactive user input.
+# 🏏 IPL Match Winner Predictor
 
-⚡ Features
-FastAPI backend serving ML predictions
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)  
+[![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green.svg)](https://fastapi.tiangolo.com/)  
+[![React](https://img.shields.io/badge/React-Frontend-61DAFB.svg)](https://reactjs.org/)  
+[![XGBoost](https://img.shields.io/badge/XGBoost-ML-orange.svg)](https://xgboost.readthedocs.io/)  
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-XGBoost model trained on IPL data
+Predict the outcome of IPL matches with **AI + ML**!  
+This project combines a **FastAPI backend** (with an XGBoost model) and a **React frontend** for an interactive match prediction experience.
 
-Input cleaning and encoding for robustness
+---
 
-Open CORS policy allowing any origin
+## ✨ Features
+- ⚡ **FastAPI backend** serving ML predictions
+- 🧠 **XGBoost model** trained on IPL data
+- 🧹 **Input cleaning & encoding** for robustness
+- 🌐 **CORS support** (open in dev, restrict in prod)
+- 💻 **React frontend** with a simple UI
+- 🚀 **Easy setup & deployment**
 
-React frontend with user-friendly UI
+---
 
-Easy local setup and deployment
+## 🔗 Live Demo
+- Frontend: `https://your-frontend-url.com`  
+- Backend API: `https://your-backend-url.com/predict`  
 
-🔗 Live Demo
-Frontend React App: https://your-frontend-url.com
+---
 
-Backend API: https://your-backend-url.com/predict
+## 🛠️ Setup & Run
 
-🔧 Setup & Run Backend
-bash
+### Backend
+```bash
+# Install dependencies
 pip install fastapi uvicorn xgboost numpy
-Run locally:
 
-bash
+# Run locally
 uvicorn ipl_prediction.main:app --host 0.0.0.0 --port 8000 --reload
-🔧 Setup & Run Frontend
-bash
+cd frontend
 npm install
 npm start
-The frontend Axios calls should use your backend URL above in production, or http://localhost:8000/predict for local testing.
+Frontend
+cd frontend
+npm install
+npm start
+
+
+In development, Axios calls in the frontend should point to
+http://localhost:8000/predict.
+For production, update to your deployed backend URL.
 
 ⚠️ CORS Policy
-The backend uses an open CORS policy (allow_origins=["*"]), allowing calls from any origin. For production security, restrict origins:
 
-python
-allow_origins=["https://your-frontend-url.com"]
-🚀 Deployment
-Deploy backend and frontend on your favorite platforms (Render, Vercel, Netlify, etc.). Update frontend API URLs accordingly to avoid CORS or network errors.
+Default (development):
 
-🛠 Project Structure
-text
+allow_origins = ["*"]
+
+
+Production (restrict to frontend domain):
+
+allow_origins = ["https://your-frontend-url.com"]
+
+🗂 Project Structure
 ipl_prediction/
 ├── main.py
 ├── xgb_model.json
 ├── encoding_dict.pkl
+
 frontend/
 ├── src/
 ├── package.json
+
 README.md
-🙌 Contributions
-Improve the model, UI, or add features by sending issues or pull requests.
+
+🚀 Deployment
+
+Deploy backend on Render, Railway, or Heroku
+
+Deploy frontend on Vercel, Netlify, or GitHub Pages
+
+Update frontend API URL to point to deployed backend
+
+🤝 Contributing
+
+Contributions are welcome! 🎉
+You can help by:
+
+Improving the ML model
+
+Enhancing the frontend UI
+
+Adding new features
+
+Open an issue or pull request to get started.
