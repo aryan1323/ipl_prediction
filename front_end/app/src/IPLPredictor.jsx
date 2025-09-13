@@ -18,6 +18,8 @@ export default function IPLPredictor() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  const commonMatchTypes = ["League", "Semi Final", "Final"];
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -138,6 +140,25 @@ export default function IPLPredictor() {
     </div>
   );
 
+  const renderMatchTypeField = () => (
+    <div className="field-group" key="match_type">
+      <label>{fieldLabels["match_type"]}</label>
+      <select
+        name="match_type"
+        value={form.match_type}
+        onChange={handleChange}
+        required
+      >
+        <option value="">Select {fieldLabels["match_type"]}</option>
+        {commonMatchTypes.map((type) => (
+          <option key={type} value={type}>
+            {type}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
+
   return (
     <div className="container">
       <div className="card">
@@ -152,7 +173,7 @@ export default function IPLPredictor() {
         <form onSubmit={handleSubmit}>
           <div className="grid">
             {renderSelectField("city", commonCities)}
-            {renderInputField("match_type")}
+            {renderMatchTypeField()}
             {renderSelectField("venue", commonVenues)}
             {renderSelectField("team1", commonTeams)}
             {renderSelectField("team2", commonTeams)}
