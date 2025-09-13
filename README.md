@@ -10,7 +10,7 @@
   <a href="https://fastapi.tiangolo.com/"><img src="https://img.shields.io/badge/FastAPI-Backend-green.svg" /></a>
   <a href="https://reactjs.org/"><img src="https://img.shields.io/badge/React-Frontend-61DAFB.svg" /></a>
   <a href="https://xgboost.readthedocs.io/"><img src="https://img.shields.io/badge/XGBoost-ML-orange.svg" /></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" /></a>
+  
 </p>
 
 <p align="center">
@@ -33,8 +33,8 @@ This project combines a <b>FastAPI backend</b> (with an XGBoost model) and a <b>
 
 ## 🔗 Live Demo
 
-- 🖥 **Frontend:** [https://your-frontend-url.com](https://your-frontend-url.com)  
-- 🔌 **Backend API:** [https://your-backend-url.com/predict](https://your-backend-url.com/predict)  
+- 🖥 **Frontend:** [https://ipl-prediction-odgx.vercel.app/](https://ipl-prediction-odgx.vercel.app/)  
+- 🔌 **Backend API:** [https://backend-ipl-5.onrender.com](https://backend-ipl-5.onrender.com)  
 
 ---
 
