@@ -37,7 +37,7 @@ export default function IPLPredictor() {
 
     try {
       const res = await axios.post(
-        "https://backend-ipl-5.onrender.com/predict",
+        "https://backend-ipl-6.onrender.com/",
         payload,
         { headers: { "Content-Type": "application/json" } }
       );
